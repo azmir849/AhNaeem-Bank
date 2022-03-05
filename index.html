@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>AhNaeem Bank</title>
+    <title>Login</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css"/>
 </head>
+
 <body>
-  
-<!-- ***********LogIn Area *********** -->
-<div id="login-area">
-    <h1 class="text-center">WelCome To AhNaeem Bank</h1>
-    <div class="submit-area">
-        <h4>Login</h4>
-        <input type="text" class="form-control" placeholder="Email"><br>
-        <input type="password" class="form-control" name="" id="" placeholder="Password"><br>
-        <button id="login" class="btn btn-success">Enter</button>
-    </div>
-</div>
-<!-- ***********LogIn Area End ******* -->
+    <main class="max-w-screen-lg mx-auto px-12 my-16">
+        <div class="flex flex-col items-center">
+            <h1 class="text-gray-500 text-3xl text-center">Welcome to my 
+                <span class="text-purple-700 font-semibold">Bank</span>
+            </h1>
+            <img class="w-24 h-24 object-contain mt-6" src="images/bank.jpg" alt="logo">
+        </div>
 
-<!-- ***********Transaction Area *********** -->
-<div id="transaction-area">
-   <div class="row">
-       <div class="col-md-4">
-          <div class="deposit status">
-            <h5>Deposit</h5>
-            <h2>$00</h2>
-          </div>
-       </div>
-       <div class="col-md-4 ">
-           <div class="withdraw status">
-            <h5>Withdraw</h5>
-            <h2>$00</h2>
-           </div>
-       </div>
-       <div class="col-md-4">
-           <div class="balance status">
-            <h5>Balance</h5>
-            <h2>$1240</h2>
-           </div>
-       </div>
-   </div>
-</div>
-<!-- ***********Transaction Area End ******* -->
-    
+        <!-- login section   -->
+        <section class="w-3/4 mx-auto my-12">
+            <h3 class="text-gray-600 text-2xl mb-6 text-center">Please Login</h3>
 
+            <div>
+                <div class="flex flex-col space-y-6">
+                    <input
+                    id="user_name_field"
+                        class="border border-gray-400 py-3 px-6 w-66 h-12 rounded-lg focus:outline-none focus:border-purple-800 text-gray-600"
+                        type="text" placeholder="Your username (admin)"
+                    />
+                    <input
+                    id="user_password_field"
+                        class="border border-gray-400 py-3 px-6 w-66 h-12 rounded-lg focus:outline-none focus:border-purple-800 text-gray-600"
+                        type="password" placeholder="Password (admin123)"
+                    />
 
+                     <p id="login_error_messege" class="text-red-500 font-semibold flex justify-center"></p>
 
-<!-- *************JS******* -->
-<script>
-const loginBtn= document.getElementById("login");
-loginBtn.addEventListener("click",function(){
-    const loginArea = document.getElementById("login-area");
-    loginArea.style.display = "none";
-   const transactionArea =  document.getElementById("transaction-area");
-   transactionArea.style.display = "block";
-})
+                    <button id="login_button" class="text-white bg-purple-800 w-24 px-4 py-2 rounded-lg flex justify-center mx-auto border border-purple-500 hover:bg-purple-200 hover:text-purple-800 transition duration-700">Login</button>
+                </div>
+            </div>
+        </section>
+    </main>
 
-</script>
-
-<!-- *********JS End******* -->
-
+    <script src="js/login.js"></script>
 </body>
+
 </html>
